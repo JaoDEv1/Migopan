@@ -8,10 +8,17 @@ font-family: "Madimi One", sans-serif;
 body {
   background-color: #434047;
   font-family: "Madimi One", sans-serif;
+  width: 100%;
+}
+
+.container {
+  width: 82%;
+  height: 100%;
+  margin-left: 0;
 }
 
 .logo {
-  width: 180px;
+  width: 45%;
   margin-top: 10px;
   margin-left: 10px;
   filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.6));
@@ -19,17 +26,19 @@ body {
 
 .barracima {
   display: flex;
+  width: 82%;
+  height: 10%;
 }
 
 .titulo {
   text-align: center;
-  margin-left: 30%;
-  margin-top: 50px;
+  margin-left: 11%;
+  margin-top: 3%;
   color: white;
 }
 
 .titulo h1 {
-  font-size: 50px;
+  font-size: 3em;
   letter-spacing: 6px;
 }
 
@@ -41,13 +50,13 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  width: 250px;
+  width: 18%;
   margin-left: auto;
-  font-size: 30px;
+  font-size: 180%;
   padding: 10px 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.6));
-  height: 100vh;
+  height: 100%;
   z-index: 1000;
 }
 
@@ -85,36 +94,49 @@ body {
 .iconegrupos,
 .iconeloja,
 .iconeajustes {
-  width: 70px;
-  margin-bottom: 8px;
+  width: 30%;
 }
 
 .blocoperfil {
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 2%;
+  margin-top: 8%;
 }
 
 .bordainferior {
   width: 80%;
-  height: 2px;
+  height: 0.3%;
   background-color: rgba(204, 207, 219);
-  margin: 10px auto;
-  margin-bottom: 70px;
-}
-
-main {
-  position: relative; /* Necessário para o bambu se guiar por aqui */
-  min-height: 100vh;
-  z-index: 1;
+  margin: 1% auto;
+  margin-bottom: 20%;
 }
 
 .emdesenvolvimento {
-  width: 600px;
-  margin-left: 250px;
-  margin-top: 50px;
+  width: 40%;
+  margin-left: 35%;
+  margin-top: 1%;
 }
 
 .sombrinha {
   filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.6));
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.task {
+  width: 45%;
+  background-color: #f36769;
+  color: #fff;
+  margin-top: 5%;
+  margin-left: 3%;
+  border-radius: 10%;
+  padding: 2%;
+}
+
+.task img {
+  width: 15%;
+  margin-top: 3%;
+}
+
+.horario {
+  margin-top: 5%;
+  text-align: center;
 }
