@@ -6,27 +6,27 @@ font-family: "Madimi One", sans-serif;
 */
 
 body {
-  background-color: #434047;
   font-family: "Madimi One", sans-serif;
   width: 100%;
   display: flex;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-h1{ 
+h1 {
   margin: 0;
 }
 
-p{
+p {
   margin: 0;
 }
 
 .container {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   width: 100%;
   max-width: 100%;
@@ -41,7 +41,7 @@ p{
   width: 110px;
 }
 
-.logo img{
+.logo img {
   width: 100%;
   filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.6));
 }
@@ -51,7 +51,7 @@ p{
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 150px;
+  height: 120px;
   position: relative;
 }
 
@@ -77,13 +77,12 @@ p{
   letter-spacing: 2px;
 }
 
-.sidebar{
+.sidebar {
   min-width: 200px;
-  background-color: blue;
   height: 100%;
 }
 
-.main_content{
+.main_content {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -101,7 +100,7 @@ p{
   z-index: 1000;
 }
 
-a{
+a {
   font-size: 16px;
 }
 
@@ -169,22 +168,59 @@ a{
 
 .task {
   width: 380px;
-  height: 150px;
-  background-color: #f36769;
+  min-height: 160px;
+  background-color: #ec4d4d;
   color: #fff;
-  border-radius: 35px;
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 15px;
 }
 
-.card_up{
+.add_Container {
+  width: 380px;
+  min-height: 160px;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task_add {
+  width: 105px;
+  height: 95px;
+  background-color: #4f4f53a8;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.6));
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.918);
+  font-size: 35px;
+  transition: all ease-in-out 100ms;
+}
+
+.task_add:hover {
+  scale: 1.02;
+  /* font-size: 40px; */
+}
+
+.task_add:active {
+  scale: 0.98;
+}
+
+.card_up {
   display: flex;
   flex-direction: column;
 }
 
-.card_down{
+.card_down {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -194,14 +230,183 @@ a{
   width: 30px;
 }
 
-@media (max-width:1040px){
-  .sidebar{
+@media (max-width: 1040px) {
+  .sidebar {
     display: none;
   }
 }
 
-@media (max-width:600px){
-  .container{
+@media (max-width: 600px) {
+  .container {
     flex-direction: column;
   }
+}
+
+.containerPerfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 45px;
+}
+
+.profileBox {
+  display: flex;
+  height: 100%;
+  justify-content: top;
+  max-width: 95%;
+}
+
+.profileImg {
+  min-width: 250px;
+  min-height: 250px;
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 100%;
+  height: fit-content;
+  z-index: 2;
+  background-color: #19181c;
+  position: relative;
+}
+
+.profileImg button {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: 3;
+  font-size: 20px;
+  background-color: #eb4443;
+  border-radius: 100%;
+  color: white;
+  border: none;
+  transition: all ease-in-out 100ms;
+  bottom: 0px;
+  right: 20px;
+}
+
+.profileImg button:hover {
+  scale: 1.02;
+  /* font-size: 40px; */
+}
+
+.profileImg button:active {
+  scale: 0.98;
+}
+
+.profileImg img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: contain;
+}
+
+.infoBox {
+  display: flex;
+  align-items: center;
+  background-color: #19181c;
+  width: 650px;
+  height: 220px;
+  border-radius: 25px;
+  margin-top: 80px;
+  padding: 25px;
+  color: white;
+  padding-left: 100px;
+}
+
+.infoBox div {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.infoBox span {
+  color: #6b6a6e;
+}
+
+.infoBox div:nth-child(2) {
+  justify-content: end;
+  align-items: end;
+}
+
+/*<div class="migoBox">
+    <div class="migoInfo">asd</div>
+    <div class="userMigo">
+      <h1>Migo de Enzo</h1>
+      <img class="userMigoImg" src="/Migopan/img/emdesenvolvimento.png" alt="">
+    </div>
+  </div> */
+
+.mainBox {
+  margin-left: -80px;
+  max-width: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mainBox span {
+  font-size: 18px;
+}
+
+.migoBox {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.migoInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.items {
+  width: 310px;
+  height: 85px;
+  background-color: #19181c;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.items span{
+  display: flex;
+  align-items: center;
+}
+
+.userMigo {
+  padding: 15px;
+  width: 300px;
+  background-color: #19181c;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.userMigo h1 {
+  font-size: 30px;
+  color: white;
+}
+
+.userMigoImg {
+  width: 250px;
+  height: 250px;
+}
+
+.items span {
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  width: 30px;
+}
+
+.icon img {
+  width: 100%;
 }
