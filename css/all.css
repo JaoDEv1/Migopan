@@ -188,9 +188,11 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: default;
 }
 
 .task_add {
+  cursor: pointer;
   width: 105px;
   height: 95px;
   background-color: #4f4f53a8;
