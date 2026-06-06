@@ -236,9 +236,6 @@
   align-items: center;
 }
 
-.tarefa:hover {
-}
-
 .tarefa-check {
   cursor: pointer;
 }
