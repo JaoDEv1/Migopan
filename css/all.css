@@ -1,412 +1,328 @@
-@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+/* Importantes:
+subtexto: #a7b0d3 */
 
-/*Esse import é para a fonte abaixo:
-
-font-family: "Madimi One", sans-serif;
-*/
-
-body {
-  font-family: "Madimi One", sans-serif;
-  width: 100%;
-  display: flex;
-}
-
+/* ==========================================================================
+   CONFIGURAÇÕES GLOBAIS E RESETS
+   ========================================================================== */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-  margin: 0;
+body {
+  font-family: "Nunito", sans-serif;
+  width: 100%;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  box-sizing: border-box;
+  padding: 15px;
+  gap: 15px;
+  background-color: #000413;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1,
 p {
   margin: 0;
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+/* Componentes Globais reutilizáveis */
+button {
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  scale: 1.02;
+}
+
+button:active {
+  scale: 0.98;
+}
+
+.gradient-card {
+  background: linear-gradient(
+    180deg,
+    rgba(6, 12, 34, 0.95),
+    rgba(4, 10, 30, 0.95)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 0 50px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================================================
+   SCROLLBAR GLOBAL
+   ========================================================================== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(8, 10, 35, 0.8);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff4d4d 0%, #ff594d 30%, #ff7f4d 100%);
+  border-radius: 999px;
+  border: 2px solid rgba(8, 10, 35, 0.8);
+  box-shadow:
+    0 0 5px rgba(255, 77, 77, 0.295),
+    0 0 10px rgba(255, 109, 51, 0.267);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #fc3b3b 0%, #f75448 30%, #f76f39 100%);
+  box-shadow:
+    0 0 5px rgba(255, 77, 77, 0.295),
+    0 0 10px rgba(255, 109, 51, 0.267);
+}
+
+/* ==========================================================================
+   ESTRUTURA DA SIDEBAR (REPETIDA EM TODAS AS PÁGINAS)
+   ========================================================================== */
+.sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  height: calc(100vh - 30px);
+  border-radius: 20px;
+  border: solid 1px #0d152c;
+  background-color: #000718;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 0 50px rgba(0, 0, 0, 0.25);
+}
+
+.sidebar-conteudo {
+  border-radius: 20px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 15px;
   width: 100%;
-  max-width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 50px 20px 20px 20px;
+  max-height: 950px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
 }
 
 .logo {
-  position: absolute;
-  left: 0;
-  width: 110px;
+  width: 150px;
 }
 
 .logo img {
   width: 100%;
-  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.6));
 }
 
-.barracima {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 120px;
-  position: relative;
-}
-
-.titulo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
-
-.titulo h1 {
-  margin: 0;
-  font-size: 35px;
-  letter-spacing: 6px;
-}
-
-.titulo p {
-  font-size: 15px;
-  margin: 0;
-  letter-spacing: 2px;
-}
-
-.sidebar {
-  min-width: 200px;
-  height: 100%;
-}
-
-.main_content {
+/* Links de Navegação */
+.nav_links {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 25px;
 }
 
-.menulateral {
-  position: fixed;
-
-  margin-left: auto;
-  font-size: 180%;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.6));
-  height: 100%;
-  z-index: 1000;
-}
-
-a {
-  font-size: 16px;
-}
-
-.menulateral a {
-  text-decoration: none;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+.nav_links a {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 18px;
-  gap: 10px;
-  padding-right: 20px;
+  font-weight: 700;
+  transition: all 0.25s ease;
 }
 
-.menulateral ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-.menulateral::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 5%;
-  height: 90%;
-  width: 2px;
-  background-color: rgba(204, 207, 219);
-}
-
-.iconeperfil,
-.iconemigo,
-.iconesocial,
-.iconegrupos,
-.iconeloja,
-.iconeajustes {
-  width: 55px;
-}
-
-.blocoperfil {
-  margin-bottom: 2%;
-  margin-top: 8%;
-}
-
-.bordainferior {
-  width: 80%;
-  height: 0.3%;
-  background-color: rgba(204, 207, 219);
-  margin: 1% auto;
-  margin-bottom: 20%;
-}
-
-.emdesenvolvi nto {
-  width: 40%;
-  margin-left: 35%;
-  margin-top: 1%;
-}
-
-.sombrinha {
-  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.6));
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.task {
-  width: 380px;
-  min-height: 160px;
-  background-color: #ec4d4d;
-  color: #fff;
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 15px;
-}
-
-.add_Container {
-  width: 380px;
-  min-height: 160px;
-  background-color: transparent;
-  box-shadow: none;
-  border: none;
-  border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.task_add {
-  width: 105px;
-  height: 95px;
-  background-color: #4f4f53a8;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.6));
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  color: rgba(255, 255, 255, 0.918);
-  font-size: 35px;
-  transition: all ease-in-out 100ms;
-}
-
-.task_add:hover {
+.nav_links a:hover {
   scale: 1.02;
-  /* font-size: 40px; */
 }
 
-.task_add:active {
+.nav_links a:active {
   scale: 0.98;
 }
 
-.card_up {
-  display: flex;
-  flex-direction: column;
-}
-
-.card_down {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.task img {
-  width: 30px;
-}
-
-@media (max-width: 1040px) {
-  .sidebar {
-    display: none;
-  }
-}
-
-@media (max-width: 600px) {
-  .container {
-    flex-direction: column;
-  }
-}
-
-.containerPerfil {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 45px;
-}
-
-.profileBox {
-  display: flex;
-  height: 100%;
-  justify-content: top;
-  max-width: 95%;
-}
-
-.profileImg {
-  min-width: 250px;
-  min-height: 250px;
-  max-width: 250px;
-  max-height: 250px;
-  border-radius: 100%;
-  height: fit-content;
-  z-index: 2;
-  background-color: #19181c;
-  position: relative;
-}
-
-.profileImg button {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  z-index: 3;
-  font-size: 20px;
-  background-color: #eb4443;
-  border-radius: 100%;
-  color: white;
-  border: none;
-  transition: all ease-in-out 100ms;
-  bottom: 0px;
-  right: 20px;
-}
-
-.profileImg button:hover {
-  scale: 1.02;
-  /* font-size: 40px; */
-}
-
-.profileImg button:active {
-  scale: 0.98;
-}
-
-.profileImg img {
+.nav_links a div {
   width: 100%;
-  height: 100%;
-  object-position: center;
-  object-fit: contain;
-}
-
-.infoBox {
   display: flex;
   align-items: center;
-  background-color: #19181c;
-  width: 650px;
-  height: 220px;
-  border-radius: 25px;
-  margin-top: 80px;
-  padding: 25px;
-  color: white;
-  padding-left: 100px;
-}
-
-.infoBox div {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-}
-
-.infoBox span {
-  color: #6b6a6e;
-}
-
-.infoBox div:nth-child(2) {
-  justify-content: end;
-  align-items: end;
-}
-
-/*<div class="migoBox">
-    <div class="migoInfo">asd</div>
-    <div class="userMigo">
-      <h1>Migo de Enzo</h1>
-      <img class="userMigoImg" src="/Migopan/img/emdesenvolvimento.png" alt="">
-    </div>
-  </div> */
-
-.mainBox {
-  margin-left: -80px;
-  max-width: 95%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.mainBox span {
-  font-size: 18px;
-}
-
-.migoBox {
-  display: flex;
-  justify-content: space-between;
-  color: white;
-}
-
-.migoInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.items {
-  width: 310px;
-  height: 85px;
-  background-color: #19181c;
-  border-radius: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-
-.items span{
-  display: flex;
-  align-items: center;
-}
-
-.userMigo {
-  padding: 15px;
-  width: 300px;
-  background-color: #19181c;
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   box-sizing: border-box;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 20px;
 }
 
-.userMigo h1 {
-  font-size: 30px;
-  color: white;
-}
-
-.userMigoImg {
-  width: 250px;
-  height: 250px;
-}
-
-.items span {
-  display: flex;
-  gap: 10px;
-}
-
-.icon {
-  width: 30px;
-}
-
-.icon img {
+/* Classes de Estado Ativo nos Links */
+.div_active {
   width: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, rgb(11, 13, 43), rgb(9, 10, 31));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 0 50px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  position: relative;
+}
+
+.div_active::before {
+  content: "";
+  width: 1px;
+  height: 58px;
+  border-radius: 20px;
+  position: absolute;
+  left: 0px;
+}
+
+.div_active span {
+  filter: drop-shadow(0 0 4px rgba(111, 0, 255, 0.45));
+}
+
+/* Ícones Gerais e Customizações por Página */
+.bi {
+  width: 34px;
+}
+
+.bi-home-active {
+  filter: drop-shadow(0px 0px 4px #8535fc);
+}
+.nav-home {
+  border-left: solid #8435fc;
+}
+.nav-home::before {
+  box-shadow: 0px 0px 20px 2px #8435fc;
+}
+
+.bi-migo-active {
+  filter: drop-shadow(0px 0px 6px #a6121a);
+}
+.nav-migo {
+  border-left: solid #a6121a;
+}
+.nav-migo::before {
+  box-shadow: 0px 0px 20px 2px #a6121a;
+}
+
+.bi-social-active {
+  filter: drop-shadow(0px 0px 6px #f61ce4);
+}
+.nav-social {
+  border-left: solid #f61ce4;
+}
+.nav-social::before {
+  box-shadow: 0px 0px 20px 2px #f61ce4;
+}
+
+.bi-grupos {
+  color: #1cb0f6;
+}
+.bi-grupos-active {
+  color: #1cb0f6;
+  filter: drop-shadow(0px 0px 6px #1cb0f6);
+}
+.nav-grupos {
+  border-left: solid #1cb0f6;
+}
+.nav-grupos::before {
+  box-shadow: 0px 0px 20px 2px #1cb0f6;
+}
+
+.bi-loja {
+  color: #ffe005;
+}
+.bi-loja-active {
+  color: #ffe005;
+  filter: drop-shadow(0px 0px 6px #ffe005);
+}
+.nav-loja {
+  border-left: solid #ffe005;
+}
+.nav-loja::before {
+  box-shadow: 0px 0px 20px 2px #ffe005;
+}
+
+.bi-perfil {
+  color: #ff7a59;
+}
+.bi-perfil-active {
+  color: #ff7a59;
+  filter: drop-shadow(0px 0px 6px #ff7a59);
+}
+.nav-perfil {
+  border-left: solid #ff7a59;
+}
+.nav-perfil::before {
+  box-shadow: 0px 0px 20px 2px #ff7a59;
+}
+
+.bi-ajustes {
+  color: #ffffffa6;
+}
+.bi-ajustes-active {
+  color: #ffffffa6;
+  filter: drop-shadow(0px 0px 6px #ffffffa6);
+}
+.nav-ajustes {
+  border-left: solid #4b4652;
+}
+.nav-ajustes::before {
+  box-shadow: 0px 0px 20px 2px #fff;
+}
+
+/* Botão Sair */
+.sair-btn {
+  width: 100%;
+  padding: 15px;
+  color: #ea2221;
+  font-size: 20px;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 20px;
+  border: solid 1px #0d152c;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 0 50px rgba(0, 0, 0, 0.25);
+}
+
+.bi-exit {
+  width: 30px;
+  filter: drop-shadow(0 0 4px currentcolor);
+}
+
+.sair-btn span {
+  font-size: 20px;
+  filter: drop-shadow(0 0 4px currentcolor);
+}
+
+/* ==========================================================================
+   ESTRUTURA BASE DO MAIN CONTENT (COMPARTILHADO)
+   ========================================================================== */
+.main {
+  flex: 1;
+  box-sizing: border-box;
+  height: calc(100vh - 30px);
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #000718;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 0 50px rgba(0, 0, 0, 0.25);
+  border: solid 1px #0d152c;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
 }
