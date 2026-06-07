@@ -1,0 +1,204 @@
+.page-intro {
+  display: flex;
+  gap: 15px;
+}
+
+.page-intro svg {
+  width: 50px;
+}
+
+.grupos-header {
+  display: flex;
+  max-width: 2864px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.page-info h1 {
+  font-weight: bold;
+  filter: drop-shadow(0 0 4px rgba(111, 0, 255, 0.45));
+}
+
+.page-info p {
+  color: #a7b0d3;
+  filter: drop-shadow(0 0 4px rgba(111, 0, 255, 0.45));
+}
+
+.grupos-header-right {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+/* Botão Nova Tarefa */
+.grupos-header-add {
+  height: 64px;
+  padding: 0 32px;
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(180deg, #ff7a59 0%, #ff5a5f 45%, #d92a35 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 0 20px rgba(255, 90, 95, 0.35),
+    0 0 40px rgba(255, 122, 89, 0.15);
+  transition: all 0.25s ease;
+}
+
+.grupos-header-add span {
+  font-size: 35px;
+  font-weight: 500;
+
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.25));
+}
+
+.grupos-header-add:hover {
+  scale: 1.02;
+}
+
+.grupos-header-add:active {
+  scale: 0.98;
+}
+
+.grupos-body {
+  width: 100%;
+  display: flex;
+}
+
+.conteudo-topo {
+  display: flex;
+  gap: 10px;
+}
+
+.search {
+  width: 350px;
+  padding: 0px 10px;
+  background-color: #09101d;
+  border-radius: 20px;
+  border: solid 1px #151b2d;
+  color: white;
+  outline: none;
+}
+
+/* Abas de Filtros (Todas, Pendentes, etc.) */
+.filtros-card {
+  color: #a7b0d3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background: linear-gradient(180deg, #0a0e25, #090e26);
+  box-shadow:
+    inset 0 1x 0 rgba(19, 141, 46, 0.03),
+    0 0 50px rgba(0, 0, 0, 0.25);
+  border: solid 1px #0d152c;
+}
+
+.filtros-card svg {
+  width: 25px;
+}
+
+/* Estado Ativo do Filtro */
+.filtros-card-active1 {
+  background: none;
+  background-color: #a6121a;
+  color: white;
+  font-weight: bold;
+  border: none;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0px 0px 15px #a6121998;
+}
+
+.filtros-card-active1 span {
+  filter: drop-shadow(0 0 4px #ffffff7a);
+}
+
+.filtros-card-active1 svg {
+  width: 10px;
+  filter: drop-shadow(0 0 4px #ffffff);
+}
+
+.tarefas-notificacao {
+  color: white;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: #272e55;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.conteudo-lateral {
+  display: flex;
+  border-radius: 20px;
+  height: fit-content;
+  width: 550px;
+  box-sizing: border-box;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.grupo-lateral-background {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
+  max-height: 500px;
+  background-color: red;
+  position: relative;
+}
+
+.dark-effect {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+  box-shadow: inset 0 0 5px #000;
+}
+
+.grupo-lateral-background img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.lateral-info{
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 25px 25px 25px;
+}
+
+.lateral-info h1{
+  font-size: 25px;
+  filter: drop-shadow(0 0 4px rgba(111, 0, 255, 0.45));
+
+}
+
+.lateral-info h2{
+  font-size: 18px;
+  color: #FF7A59;
+  filter: drop-shadow(0 0 4px #a6121a);
+  margin: 0;
+}
+
+.lateral-info p{
+  color: #a7b0d3;
+}

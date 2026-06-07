@@ -3,6 +3,16 @@
    ========================================================================== */
 
 /* Header da Index (Título e Stats) */
+
+.page-intro{
+  display: flex;
+  gap: 15px;
+}
+
+.page-intro svg{
+  width: 50px;
+}
+
 .index-header {
   display: flex;
   max-width: 2864px;
@@ -158,7 +168,7 @@
 }
 
 /* Abas de Filtros (Todas, Pendentes, etc.) */
-.tarefas-card {
+.filtros-card {
   color: #a7b0d3;
   display: flex;
   align-items: center;
@@ -171,6 +181,28 @@
     0 0 50px rgba(0, 0, 0, 0.25);
   border: solid 1px #0d152c;
 }
+
+
+/* Estado Ativo do Filtro */
+.filtros-card-active1 {
+  background: none;
+  background-color: #a6121a;
+  color: white;
+  font-weight: bold;
+  border: none;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0px 0px 15px #a6121998;
+}
+
+.filtros-card-active1 span {
+  filter: drop-shadow(0 0 4px #ffffff7a);
+}
+
+.filtros-card-active1 svg {
+  filter: drop-shadow(0 0 4px #ffffff);
+}
+
 
 /* Ícones dos filtros de tarefas */
 .bi-list {
@@ -197,26 +229,6 @@
   height: 25px;
   border-radius: 100%;
   background-color: #272e55;
-}
-
-/* Estado Ativo do Filtro */
-.tarefas-card-active1 {
-  background: none;
-  background-color: #a6121a;
-  color: white;
-  font-weight: bold;
-  border: none;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.03),
-    0px 0px 15px #a6121998;
-}
-
-.tarefas-card-active1 span {
-  filter: drop-shadow(0 0 4px #ffffff7a);
-}
-
-.tarefas-card-active1 svg {
-  filter: drop-shadow(0 0 4px #ffffff);
 }
 
 .index-tarefas-conteudo {
@@ -536,7 +548,7 @@
 
 .semanal-info-titulo strong {
   font-size: 18px;
-  color: #ff5a5f;
+  color: #8B5CF6;
   filter: drop-shadow(0 0 4px currentcolor);
 }
 
@@ -582,8 +594,8 @@
   height: 105%;
   border: none;
   border-radius: 20px;
-  background-color: #a6121a;
-  color: #a6121a;
+  background-color: #8B5CF6;
+  color: #8B5CF6;
   filter: drop-shadow(0 0 8px currentcolor);
 }
 
