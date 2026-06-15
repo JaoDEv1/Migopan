@@ -1,4 +1,4 @@
-# Migopan - Software de Rotina Gamificado 🐼🌾
+# Migopan - Software de Rotina Gamificado 
 
 An application/website built to help user productivity in their daily activities through gamification principles, encouraging routine organization by linking it to the well-being of a virtual pet.
 
