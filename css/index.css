@@ -4,12 +4,12 @@
 
 /* Header da Index (Título e Stats) */
 
-.page-intro{
+.page-intro {
   display: flex;
   gap: 15px;
 }
 
-.page-intro svg{
+.page-intro svg {
   width: 50px;
 }
 
@@ -38,8 +38,8 @@
 
 /* Botão Nova Tarefa */
 .index-header-add {
-  height: 64px;
-  padding: 0 32px;
+  height: min-content;
+  padding: 4px 25px;
   border: none;
   border-radius: 20px;
   display: flex;
@@ -182,7 +182,6 @@
   border: solid 1px #0d152c;
 }
 
-
 /* Estado Ativo do Filtro */
 .filtros-card-active1 {
   background: none;
@@ -221,6 +220,7 @@
 .tarefas-notificacao {
   color: white;
   font-size: 14px;
+  line-height: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -322,7 +322,6 @@
 .tarefa2 span {
   color: #8003ef;
   filter: drop-shadow(0 0 4px currentcolor);
-
 }
 
 .icon-tarefa3 {
@@ -547,7 +546,7 @@
 
 .semanal-info-titulo strong {
   font-size: 18px;
-  color: #8B5CF6;
+  color: #8b5cf6;
   filter: drop-shadow(0 0 4px currentcolor);
 }
 
@@ -593,8 +592,8 @@
   height: 105%;
   border: none;
   border-radius: 20px;
-  background-color: #8B5CF6;
-  color: #8B5CF6;
+  background-color: #8b5cf6;
+  color: #8b5cf6;
   filter: drop-shadow(0 0 8px currentcolor);
 }
 
