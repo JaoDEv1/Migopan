@@ -1,960 +1,557 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Meta Tags para facilitar a busca do navegador-->
     <meta name="description" content="Um site de rotinas" />
-    <meta
-      name="keywords"
-      content="rotina, tarefas, migo, migopan, panda vermelho, gameficado, metas"
-    />
+    <meta name="keywords" content="rotina, tarefas, migo, migopan, panda vermelho, gameficado, metas"/>
     <meta name="Author" content="João Marcos Ferreira da Cunha" />
     <title>Migopan</title>
     <!--link do Bootstrap do CSS-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
 
     <link rel="stylesheet" href="/css/all.css" />
     <link rel="stylesheet" href="/css/grupos.css" />
     <link rel="shortcut icon" href="/img/iconemigo.png" type="image/png" />
-  </head>
-  <body>
+</head>
+<body>
+    
     <aside class="sidebar">
-      <div class="sidebar-conteudo">
-        <div class="logo">
-          <img src="/img/logo.png" alt="Logo" class="" />
+        <div class="sidebar-conteudo">
+            <div class="logo">
+                <img src="/img/logo.png" alt="Logo"/>
+            </div>
+
+            <nav class="nav_links">
+                <a href="/home/">
+                    <div class="div_active nav-home">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#8435FC"
+                        class="bi bi-home-active"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                        d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"
+                        />
+                        <path
+                        d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z"
+                        />
+                    </svg>
+                    <span>Home</span>
+                    </div>
+                </a>
+
+                <a href="/migo/">
+                    <div class="">
+                    <img class="bi bi-migo" src="/img/iconemigo.png" alt="" />
+                    <span>Migo</span>
+                    </div>
+                </a>
+
+                <a href="/social/">
+                    <div class="">
+                    <img class="bi bi-social" src="/img/iconesocial.png" alt="" />
+                    <span>Social</span>
+                    </div>
+                </a>
+
+                <a href="/grupos/">
+                    <div class="">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="bi bi-grupos"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                        d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
+                        />
+                    </svg>
+                    <span>Grupos</span>
+                    </div>
+                </a>
+
+                <a href="/loja/">
+                    <div class="">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="bi bi-loja"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
+                        />
+                    </svg>
+                    <span>Loja</span>
+                    </div>
+                </a>
+
+                <a href="/perfil/">
+                    <div class="">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="bi bi-perfil"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                        d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                        />
+                    </svg>
+                    <span>Perfil</span>
+                    </div>
+                </a>
+                <a href="/ajustes/">
+                    <div class="">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="bi bi-ajustes"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                        d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"
+                        />
+                    </svg>
+                    <span>Ajustes</span>
+                    </div>
+                </a>
+            </nav>
+
+            <button class="sair-btn">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="bi bi-exit"
+                    viewBox="0 0 16 16"
+                >
+                    <path
+                    fill-rule="evenodd"
+                    d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"
+                    />
+                    <path
+                    fill-rule="evenodd"
+                    d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"
+                    />
+                </svg>
+                <span>Sair</span>
+            </button>
         </div>
-
-        <nav class="nav_links">
-          <a href="/home/">
-            <div class="">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="#8435FC"
-                class="bi bi-home"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"
-                />
-                <path
-                  d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z"
-                />
-              </svg>
-              <span>Home</span>
-            </div>
-          </a>
-
-          <a href="/migo/">
-            <div class="">
-              <img class="bi bi-migo" src="/img/iconemigo.png" alt="" />
-              <span>Migo</span>
-            </div>
-          </a>
-
-          <a href="/social/">
-            <div class=" ">
-              <img class="bi bi-social" src="/img/iconesocial.png" alt="" />
-              <span>Social</span>
-            </div>
-          </a>
-
-          <a href="/grupos/">
-            <div class="div_active nav-grupos">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="bi bi-grupos-active"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
-                />
-              </svg>
-              <span>Grupos</span>
-            </div>
-          </a>
-
-          <a href="/loja/">
-            <div class="">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="bi bi-loja"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
-                />
-              </svg>
-              <span>Loja</span>
-            </div>
-          </a>
-
-          <a href="/perfil/">
-            <div class="">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="bi bi-perfil"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
-                />
-              </svg>
-              <span>Perfil</span>
-            </div>
-          </a>
-          <a href="/ajustes/">
-            <div class="">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="bi"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"
-                />
-              </svg>
-              <span>Ajustes</span>
-            </div>
-          </a>
-        </nav>
-
-        <button class="sair-btn">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            class="bi bi-exit"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"
-            />
-            <path
-              fill-rule="evenodd"
-              d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"
-            />
-          </svg>
-          <span>Sair</span>
-        </button>
-      </div>
     </aside>
 
-    <main class="main">
-      <div class="grupos-header">
-        <div class="grupos-header">
-          <div class="page-intro">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              class="bi bi-grupos-active"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
-              />
-            </svg>
-            <div class="page-info">
-              <h1>Grupos</h1>
-              <p>
-                Junte-se a grupos, convide amigos e conquiste objetivos juntos!
-              </p>
+    <div class="container">
+
+        <header class="index-header">
+            <div class="page-intro">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="bi bi-grupos-active"
+                    viewBox="0 0 16 16"
+                >
+                    <path
+                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
+                    />
+                </svg>
+                <div class="page-info">
+                    <h1>Grupos</h1>
+                    <p>
+                        Junte-se a grupos, convide amigos e conquiste objetivos juntos!
+                    </p>
+                </div>
             </div>
-          </div>
-
-          <button class="grupos-header-add"><span>+</span> Criar grupo</button>
-        </div>
-      </div>
-
-      <div class="grupos-body">
-        <div class="conteudo">
-          <div class="conteudo-topo">
-            <input type="search" class="search" placeholder="Buscar grupos" />
-
-            <button class="filtros-card filtros-card-active1">
-              <span>Todas</span>
+            
+            <button 
+                class="index-header-add"><span>+</span> Criar grupo
             </button>
+        </header>
+        <main class="group-area">
+            <div class="grupos-header">
+                <input 
+                    type="search" class="search" placeholder="Buscar grupos" 
+                />
 
-            <button class="filtros-card">
-              <span>Meus grupos</span>
-            </button>
+                <button class="filtros-card filtros-card-active1">
+                    <span>Todas</span>
+                </button>
 
-            <button class="filtros-card">
-              <span>Participando</span>
-              <!-- <span class="tarefas-notificacao">3</span> -->
-            </button>
+                <button class="filtros-card">
+                    <span>Meus grupos</span>
+                </button>
 
-            <button class="filtros-card">
-              <span>Convites</span>
-              <span class="tarefas-notificacao">2</span>
-            </button>
-          </div>
+                <button class="filtros-card">
+                    <span>Participando</span>
+                    <!-- <span class="grupos-participando">3</span> -->
+                </button>
 
-          <div class="grupos">
-            <a href="grupo">
-              <div class="grupo gradient-card">
+                <button class="filtros-card">
+                    <span>Convites</span>
+                    <span class="grupos-participando">2</span>
+                </button>
+            </div>
+
+            <div class="grupos">
+                <div class="grupo">
+                    <a href="grupo">
+                        <div class="grupo gradient-card">
+                            <div class="grupo-lateral-background">
+                                <div class="dark-effect"></div>
+                                <img src="/img/grupoEx1webp.webp" alt="Grupo de Leitura" />
+                            </div>
+
+                            <div class="grupo-info top-info">
+                            <h1>Livros para discutir</h1>
+                            <h2>Grupo criado por você</h2>
+                            <p>
+                                Grupo dedicado a discutir sobre diversos livros e tópicos
+                                literários.
+                            </p>
+                            </div>
+
+                            <hr />
+
+                            <div class="grupo-info middle-info">
+                                <div class="barra-details">
+                                    <div class="xp-quantidade-grupo">
+                                    <strong> Nível 12 </strong>
+                                    <span> 1240 / 2000 XP </span>
+                                    </div>
+                                    <div class="xp-barra">
+                                    <div class="grupo-porcentagem xp-porcentagem1"></div>
+                                    </div>
+                                </div>
+
+                                <div class="grupo-details">
+                                    <div class="grupo-detail">
+                                        <span>Membros</span>
+                                        <div class="">
+                                            <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="currentColor"
+                                            class="bi bi-grupos-active"
+                                            viewBox="0 0 16 16"
+                                            >
+                                            <path
+                                                d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
+                                            />
+                                            </svg>
+                                            <span>12</span>
+                                        </div>
+                                    </div>
+                                    <div class="grupo-detail">
+                                        <span>Tarefas</span>
+                                        <div class="">
+                                            <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="currentColor"
+                                            class="bi bi-list-task"
+                                            viewBox="0 0 16 16"
+                                            >
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5zM3 3H2v1h1z"
+                                            />
+                                            <path
+                                                d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1z"
+                                            />
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5zM2 7h1v1H2zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm1 .5H2v1h1z"
+                                            />
+                                            </svg>
+                                            <span>12</span>
+                                        </div>
+                                    </div>
+                                    <div class="grupo-detail">
+                                        <span>Sequência</span>
+                                        <div class="">
+                                            <strong class="fire">🔥</strong>
+                                            <span>10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="grupo">
+                    <a href="grupo">
+                        <div class="grupo gradient-card">
+                            <div class="grupo-lateral-background">
+                            <div class="dark-effect"></div>
+                            <img src="/img/tcc.jpg" alt="Grupo de Leitura" />
+                            </div>
+
+                            <div class="grupo-info top-info">
+                            <h1>Projeto TCC 2026</h1>
+                            <p>
+                                Organização de tarefas, pesquisas, prazos e entregas para o
+                                desenvolvimento do trabalho de conclusão de curso.
+                            </p>
+                            </div>
+
+                            <hr />
+
+                            <div class="grupo-info middle-info">
+                            <div class="barra-details">
+                                <div class="xp-quantidade-grupo">
+                                <strong> Nível 6 </strong>
+                                <span> 842 / 2000 XP </span>
+                                </div>
+                                <div class="xp-barra">
+                                <div class="grupo-porcentagem xp-porcentagem2"></div>
+                                </div>
+                            </div>
+
+                            <div class="grupo-details">
+                                <div class="grupo-detail">
+                                <span>Membros</span>
+                                <div class="">
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor"
+                                    class="bi bi-grupos-active"
+                                    viewBox="0 0 16 16"
+                                    >
+                                    <path
+                                        d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
+                                    />
+                                    </svg>
+                                    <span>10</span>
+                                </div>
+                                </div>
+                                <div class="grupo-detail">
+                                <span>Tarefas</span>
+                                <div class="">
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor"
+                                    class="bi bi-list-task"
+                                    viewBox="0 0 16 16"
+                                    >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5zM3 3H2v1h1z"
+                                    />
+                                    <path
+                                        d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1z"
+                                    />
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5zM2 7h1v1H2zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm1 .5H2v1h1z"
+                                    />
+                                    </svg>
+                                    <span>16</span>
+                                </div>
+                                </div>
+                                <div class="grupo-detail">
+                                <span>Sequência</span>
+                                <div class="">
+                                    <strong class="fire">🔥</strong>
+
+                                    <span>15</span>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="grupo grupo2"></div>
+                <div class="grupo grupo2"></div>
+                <div class="grupo grupo2"></div>
+                <div class="grupo grupo2"></div>
+                <div class="grupo grupo2"></div> 
+            </div>
+
+            <aside class="group-view gradient-card">
+
                 <div class="grupo-lateral-background">
-                  <div class="dark-effect"></div>
-                  <img src="/img/grupoEx1webp.webp" alt="Grupo de Leitura" />
+                    <div class="dark-effect"></div>
+                    <img src="/img/grupoEx1webp.webp" alt="Grupo de Leitura" />
                 </div>
 
-                <div class="grupo-info top-info">
-                  <h1>Livros para discutir</h1>
-                  <h2>Grupo criado por você</h2>
-                  <p>
+                <div class="lateral-info">
+                    <h1>Livros para discutir</h1>
+                    <h2>Grupo criado por você</h2>
+                    <p>
                     Grupo dedicado a discutir sobre diversos livros e tópicos
                     literários.
-                  </p>
+                    </p>
+
+                    <button class="convidar-membro">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="bi-person"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                        d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"
+                        />
+                        <path
+                        d="M2 13c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4"
+                        />
+                    </svg>
+                    Convidar membros
+                    </button>
                 </div>
 
                 <hr />
 
-                <div class="grupo-info middle-info">
-                  <div class="barra-details">
-                    <div class="xp-quantidade-grupo">
-                      <strong> Nível 12 </strong>
-                      <span> 1240 / 2000 XP </span>
+                <div class="lateral-info">
+                    <div class="ultimo-grupo-info">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="bi bi-grupos-active"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                        d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
+                        />
+                    </svg>
+                    <span>Membros</span>
+                    <span>12</span>
                     </div>
+                    <div class="ultimo-grupo-info">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="bi-check"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                        />
+                    </svg>
+                    <span>Tarefas concluídas</span>
+                    <span>8</span>
+                    </div>
+                    <div class="ultimo-grupo-info">
+                    <span class="fire">🔥</span>
+                    <span>Sequência atual</span>
+                    <span>7 dias</span>
+                    </div>
+                    <div class="ultimo-grupo-info sequencia">
+                    <span class="star">⭐</span>
+                    <span>Nível do grupo</span>
+                    <span>12</span>
+                    </div>
+                    <div class="barra">
                     <div class="xp-barra">
-                      <div class="grupo-porcentagem xp-porcentagem1"></div>
+                        <div class="grupo-porcentagem xp-porcentagem"></div>
                     </div>
-                  </div>
-
-                  <div class="grupo-details">
-                    <div class="grupo-detail">
-                      <span>Membros</span>
-                      <div class="">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="currentColor"
-                          class="bi bi-grupos-active"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
-                          />
-                        </svg>
-                        <span>12</span>
-                      </div>
+                    <div class="xp-quantidade">1240 / 2000 XP</div>
                     </div>
-                    <div class="grupo-detail">
-                      <span>Tarefas</span>
-                      <div class="">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="currentColor"
-                          class="bi bi-list-task"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5zM3 3H2v1h1z"
-                          />
-                          <path
-                            d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1z"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5zM2 7h1v1H2zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm1 .5H2v1h1z"
-                          />
-                        </svg>
-                        <span>12</span>
-                      </div>
-                    </div>
-                    <div class="grupo-detail">
-                      <span>Sequência</span>
-                      <div class="">
-                        <strong class="fire">🔥</strong>
-
-                        <span>10</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="grupo">
-              <div class="grupo gradient-card">
-                <div class="grupo-lateral-background">
-                  <div class="dark-effect"></div>
-                  <img src="/img/tcc.jpg" alt="Grupo de Leitura" />
-                </div>
-
-                <div class="grupo-info top-info">
-                  <h1>Projeto TCC 2026</h1>
-                  <p>
-                    Organização de tarefas, pesquisas, prazos e entregas para o
-                    desenvolvimento do trabalho de conclusão de curso.
-                  </p>
                 </div>
 
                 <hr />
 
-                <div class="grupo-info middle-info">
-                  <div class="barra-details">
-                    <div class="xp-quantidade-grupo">
-                      <strong> Nível 6 </strong>
-                      <span> 842 / 2000 XP </span>
-                    </div>
-                    <div class="xp-barra">
-                      <div class="grupo-porcentagem xp-porcentagem2"></div>
-                    </div>
-                  </div>
-
-                  <div class="grupo-details">
-                    <div class="grupo-detail">
-                      <span>Membros</span>
-                      <div class="">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="currentColor"
-                          class="bi bi-grupos-active"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
-                          />
-                        </svg>
-                        <span>10</span>
-                      </div>
-                    </div>
-                    <div class="grupo-detail">
-                      <span>Tarefas</span>
-                      <div class="">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="currentColor"
-                          class="bi bi-list-task"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5zM3 3H2v1h1z"
-                          />
-                          <path
-                            d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1z"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5zM2 7h1v1H2zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm1 .5H2v1h1z"
-                          />
-                        </svg>
-                        <span>16</span>
-                      </div>
-                    </div>
-                    <div class="grupo-detail">
-                      <span>Sequência</span>
-                      <div class="">
-                        <strong class="fire">🔥</strong>
-
-                        <span>15</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <a href="grupo">
-              <div class="grupo gradient-card">
-                <div class="grupo-lateral-background">
-                  <div class="dark-effect"></div>
-                  <img src="/img/academia.jpg" alt="Grupo de Leitura" />
-                </div>
-
-                <div class="grupo-info top-info">
-                  <h1>Desafio Academia</h1>
-                  <p>
-                    Acompanhamento de treinos, metas semanais e evolução física
-                    dos participantes.
-                  </p>
+                <div class="lateral-info lateral-mais-info">
+                    <button class="mais-info">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="bi-check-square"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                        d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"
+                        />
+                    </svg>
+                    <span>Ver tarefas do grupo</span>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                        <path
+                        d="m9.71 17.71 5.7-5.71-5.7-5.71-1.42 1.42 4.3 4.29-4.3 4.29z"
+                        ></path>
+                    </svg>
+                    </button>
+                    <button class="mais-info">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="bi bi-bar-chart"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                        d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1z"
+                        />
+                    </svg>
+                    <span>Ranking do grupo</span>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                        <path
+                        d="m9.71 17.71 5.7-5.71-5.7-5.71-1.42 1.42 4.3 4.29-4.3 4.29z"
+                        ></path>
+                    </svg>
+                    </button>
+                    <button class="mais-info">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="bi bi-ajustes"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                        d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"
+                        />
+                    </svg>
+                    <span>Ranking do grupo</span>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                        <path
+                        d="m9.71 17.71 5.7-5.71-5.7-5.71-1.42 1.42 4.3 4.29-4.3 4.29z"
+                        ></path>
+                    </svg>
+                    </button>
                 </div>
 
                 <hr />
 
-                <div class="grupo-info middle-info">
-                  <div class="barra-details">
-                    <div class="xp-quantidade-grupo">
-                      <strong> Nível 12 </strong>
-                      <span> 345 / 2000 XP </span>
-                    </div>
-                    <div class="xp-barra">
-                      <div class="grupo-porcentagem xp-porcentagem3"></div>
-                    </div>
-                  </div>
-
-                  <div class="grupo-details">
-                    <div class="grupo-detail">
-                      <span>Membros</span>
-                      <div class="">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="currentColor"
-                          class="bi bi-grupos-active"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
-                          />
-                        </svg>
-                        <span>9</span>
-                      </div>
-                    </div>
-                    <div class="grupo-detail">
-                      <span>Tarefas</span>
-                      <div class="">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="currentColor"
-                          class="bi bi-list-task"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5zM3 3H2v1h1z"
-                          />
-                          <path
-                            d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1z"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5zM2 7h1v1H2zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm1 .5H2v1h1z"
-                          />
-                        </svg>
-                        <span>17</span>
-                      </div>
-                    </div>
-                    <div class="grupo-detail">
-                      <span>Sequência</span>
-                      <div class="">
-                        <strong class="fire">🔥</strong>
-
-                        <span>17</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <a href="grupo">
-              <div class="grupo gradient-card">
-                <div class="grupo-lateral-background">
-                  <div class="dark-effect"></div>
-                  <img src="/img/vestibular.jpg" alt="Grupo de Leitura" />
+                <div class="lateral-info lateral-mais-info">
+                    <button class="sair-grupo">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="bi bi-exit"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                        fill-rule="evenodd"
+                        d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"
+                        />
+                        <path
+                        fill-rule="evenodd"
+                        d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"
+                        />
+                    </svg>
+                    <span>Sair do grupo</span>
+                    </button>
                 </div>
 
-                <div class="grupo-info top-info">
-                  <h1>Rotina dos Vestibulandos</h1>
-                  <p>
-                    Planejamento de estudos, simulados e compartilhamento de
-                    materiais para preparação dos vestibulares.
-                  </p>
-                </div>
+            </aside>
+        </main>
 
-                <hr />
-
-                <div class="grupo-info middle-info">
-                  <div class="barra-details">
-                    <div class="xp-quantidade-grupo">
-                      <strong> Nível 11 </strong>
-                      <span> 329 / 2000 XP </span>
-                    </div>
-                    <div class="xp-barra">
-                      <div class="grupo-porcentagem xp-porcentagem4"></div>
-                    </div>
-                  </div>
-
-                  <div class="grupo-details">
-                    <div class="grupo-detail">
-                      <span>Membros</span>
-                      <div class="">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="currentColor"
-                          class="bi bi-grupos-active"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
-                          />
-                        </svg>
-                        <span>5</span>
-                      </div>
-                    </div>
-                    <div class="grupo-detail">
-                      <span>Tarefas</span>
-                      <div class="">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="currentColor"
-                          class="bi bi-list-task"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5zM3 3H2v1h1z"
-                          />
-                          <path
-                            d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1z"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5zM2 7h1v1H2zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm1 .5H2v1h1z"
-                          />
-                        </svg>
-                        <span>13</span>
-                      </div>
-                    </div>
-                    <div class="grupo-detail">
-                      <span>Sequência</span>
-                      <div class="">
-                        <strong class="fire">🔥</strong>
-
-                        <span>14</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="grupo">
-              <div class="grupo gradient-card">
-                <div class="grupo-lateral-background">
-                  <div class="dark-effect"></div>
-                  <img src="/img/programacao.jpg" alt="Grupo de Leitura" />
-                </div>
-
-                <div class="grupo-info top-info">
-                  <h1>Programação Diária</h1>
-                  <p>
-                    Desenvolvimento da plataforma, organização de
-                    funcionalidades e gestão das tarefas da equipe.
-                  </p>
-                </div>
-
-                <hr />
-
-                <div class="grupo-info middle-info">
-                  <div class="barra-details">
-                    <div class="xp-quantidade-grupo">
-                      <strong> Nível 8 </strong>
-                      <span> 945 / 2000 XP </span>
-                    </div>
-                    <div class="xp-barra">
-                      <div class="grupo-porcentagem xp-porcentagem5"></div>
-                    </div>
-                  </div>
-
-                  <div class="grupo-details">
-                    <div class="grupo-detail">
-                      <span>Membros</span>
-                      <div class="">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="currentColor"
-                          class="bi bi-grupos-active"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
-                          />
-                        </svg>
-                        <span>3</span>
-                      </div>
-                    </div>
-                    <div class="grupo-detail">
-                      <span>Tarefas</span>
-                      <div class="">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="currentColor"
-                          class="bi bi-list-task"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5zM3 3H2v1h1z"
-                          />
-                          <path
-                            d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1z"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5zM2 7h1v1H2zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm1 .5H2v1h1z"
-                          />
-                        </svg>
-                        <span>9</span>
-                      </div>
-                    </div>
-                    <div class="grupo-detail">
-                      <span>Sequência</span>
-                      <div class="">
-                        <strong class="fire">🔥</strong>
-
-                        <span>8</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <a href="grupo">
-              <div class="grupo gradient-card">
-                <div class="grupo-lateral-background">
-                  <div class="dark-effect"></div>
-                  <img src="/img/habitos.jpg" alt="Grupo de Leitura" />
-                </div>
-
-                <div class="grupo-info top-info">
-                  <h1>Hábitos de Alta Performance</h1>
-                  <p>
-                    Construção de hábitos saudáveis, acompanhamento de metas e
-                    evolução pessoal coletiva.
-                  </p>
-                </div>
-
-                <hr />
-
-                <div class="grupo-info middle-info">
-                  <div class="barra-details">
-                    <div class="xp-quantidade-grupo">
-                      <strong> Nível 2 </strong>
-                      <span> 1687 / 2000 XP </span>
-                    </div>
-                    <div class="xp-barra">
-                      <div class="grupo-porcentagem xp-porcentagem6"></div>
-                    </div>
-                  </div>
-
-                  <div class="grupo-details">
-                    <div class="grupo-detail">
-                      <span>Membros</span>
-                      <div class="">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="currentColor"
-                          class="bi bi-grupos-active"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
-                          />
-                        </svg>
-                        <span>6</span>
-                      </div>
-                    </div>
-                    <div class="grupo-detail">
-                      <span>Tarefas</span>
-                      <div class="">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="currentColor"
-                          class="bi bi-list-task"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5zM3 3H2v1h1z"
-                          />
-                          <path
-                            d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1z"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5zM2 7h1v1H2zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm1 .5H2v1h1z"
-                          />
-                        </svg>
-                        <span>9</span>
-                      </div>
-                    </div>
-                    <div class="grupo-detail">
-                      <span>Sequência</span>
-                      <div class="">
-                        <strong class="fire">🔥</strong>
-
-                        <span>9</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <a href="grupo">
-              <div class="grupo gradient-card">
-                <div class="grupo-lateral-background">
-                  <div class="dark-effect"></div>
-                  <img src="/img/logo.png" alt="Grupo de Leitura" />
-                </div>
-
-                <div class="grupo-info top-info">
-                  <h1>Equipe Migopan</h1>
-                  <p>
-                    Desenvolvimento da plataforma, organização de
-                    funcionalidades e gestão das tarefas da equipe.
-                  </p>
-                </div>
-
-                <hr />
-
-                <div class="grupo-info middle-info">
-                  <div class="barra-details">
-                    <div class="xp-quantidade-grupo">
-                      <strong> Nível 15 </strong>
-                      <span> 455 / 2000 XP </span>
-                    </div>
-                    <div class="xp-barra">
-                      <div class="grupo-porcentagem xp-porcentagem7"></div>
-                    </div>
-                  </div>
-
-                  <div class="grupo-details">
-                    <div class="grupo-detail">
-                      <span>Membros</span>
-                      <div class="">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="currentColor"
-                          class="bi bi-grupos-active"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
-                          />
-                        </svg>
-                        <span>8</span>
-                      </div>
-                    </div>
-                    <div class="grupo-detail">
-                      <span>Tarefas</span>
-                      <div class="">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="currentColor"
-                          class="bi bi-list-task"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5zM3 3H2v1h1z"
-                          />
-                          <path
-                            d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1z"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5zM2 7h1v1H2zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm1 .5H2v1h1z"
-                          />
-                        </svg>
-                        <span>10</span>
-                      </div>
-                    </div>
-                    <div class="grupo-detail">
-                      <span>Sequência</span>
-                      <div class="">
-                        <strong class="fire">🔥</strong>
-
-                        <span>19</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="conteudo-lateral gradient-card">
-          <div class="grupo-lateral-background">
-            <div class="dark-effect"></div>
-            <img src="/img/grupoEx1webp.webp" alt="Grupo de Leitura" />
-          </div>
-
-          <div class="lateral-info">
-            <h1>Livros para discutir</h1>
-            <h2>Grupo criado por você</h2>
-            <p>
-              Grupo dedicado a discutir sobre diversos livros e tópicos
-              literários.
-            </p>
-
-            <button class="convidar-membro">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="bi-person"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"
-                />
-                <path
-                  d="M2 13c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4"
-                />
-              </svg>
-              Convidar membros
-            </button>
-          </div>
-
-          <hr />
-
-          <div class="lateral-info">
-            <div class="ultimo-grupo-info">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="bi bi-grupos-active"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
-                />
-              </svg>
-              <span>Membros</span>
-              <span>12</span>
-            </div>
-            <div class="ultimo-grupo-info">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="bi-check"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-                />
-              </svg>
-              <span>Tarefas concluídas</span>
-              <span>8</span>
-            </div>
-            <div class="ultimo-grupo-info">
-              <span class="fire">🔥</span>
-              <span>Sequência atual</span>
-              <span>7 dias</span>
-            </div>
-            <div class="ultimo-grupo-info sequencia">
-              <span class="star">⭐</span>
-              <span>Nível do grupo</span>
-              <span>12</span>
-            </div>
-            <div class="barra">
-              <div class="xp-barra">
-                <div class="grupo-porcentagem xp-porcentagem"></div>
-              </div>
-              <div class="xp-quantidade">1240 / 2000 XP</div>
-            </div>
-          </div>
-
-          <hr />
-
-          <div class="lateral-info lateral-mais-info">
-            <button class="mais-info">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="bi-check-square"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"
-                />
-              </svg>
-              <span>Ver tarefas do grupo</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
-                <path
-                  d="m9.71 17.71 5.7-5.71-5.7-5.71-1.42 1.42 4.3 4.29-4.3 4.29z"
-                ></path>
-              </svg>
-            </button>
-            <button class="mais-info">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="bi bi-bar-chart"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1z"
-                />
-              </svg>
-              <span>Ranking do grupo</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
-                <path
-                  d="m9.71 17.71 5.7-5.71-5.7-5.71-1.42 1.42 4.3 4.29-4.3 4.29z"
-                ></path>
-              </svg>
-            </button>
-            <button class="mais-info">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="bi bi-ajustes"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"
-                />
-              </svg>
-              <span>Ranking do grupo</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
-                <path
-                  d="m9.71 17.71 5.7-5.71-5.7-5.71-1.42 1.42 4.3 4.29-4.3 4.29z"
-                ></path>
-              </svg>
-            </button>
-          </div>
-
-          <hr />
-
-          <div class="lateral-info lateral-mais-info">
-            <button class="sair-grupo">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="bi bi-exit"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"
-                />
-                <path
-                  fill-rule="evenodd"
-                  d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"
-                />
-              </svg>
-              <span>Sair do grupo</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </main>
+    </div>
 
     <!--link do Bootstrap do JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+</body>
 </html>
