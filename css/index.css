@@ -22,26 +22,29 @@ header {grid-area: header;}
 
 body {
     grid-template-columns: 1fr 7fr;
+    grid-template-rows: 1fr;
     grid-template-areas: 
         'navbar container'
     ;
+    
 }
 
 .container {
     max-height: calc(100vh - 30px);
     min-width: 100%;
+    max-width: 1520px;
     display: grid;
     gap: 40px;
     padding: 20px;
     box-sizing: border-box;
-    
+    overflow-y: auto;
     background-color: #000718;
     box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.03),
     0 0 50px rgba(0, 0, 0, 0.25);
     border: 1px solid #0d152c;
     border-radius: 20px;
-    grid-template-columns: 5fr 3fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: 8% 1fr;
     grid-template-areas:
         'header header'
@@ -66,6 +69,7 @@ body {
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .index-header-left h1 {
@@ -199,23 +203,28 @@ body {
 .tasks-area {
     display: grid;
     gap: 20px;
+    max-height: calc(100vh - 30px);
+    grid-template-columns: minmax(500px, 1fr);
     grid-template-rows: 6% 1fr;
     grid-template-areas:
         'tasks-filter'
         'tasks'
     ;
-    overflow-y: auto;
 }
 
 .tasks-header {
     display: flex;
     gap: 10px;
+    box-sizing: border-box;
+    min-width: 500px;
 }
 
 /* Abas de Filtros (Todas, Pendentes, etc.) */
 .filtros-card {
     color: #a7b0d3;
     display: flex;
+    min-width: 20px;
+    max-width: 100%;
     align-items: center;
     gap: 10px;
     padding: 10px 20px;
@@ -252,7 +261,7 @@ body {
     width: 25px;
 }
 .bi-amp {
-    width: 25px;
+    max-width: 25px;
 }
 .bi-check {
     width: 25px;
@@ -269,10 +278,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25px;
-    height: 25px;
+    max-width: 25px;
+    max-height: 25px;
+    min-width: 20px;
+    min-height: 20px;
     border-radius: 100%;
     background-color: #272e55;
+    box-sizing: border-box;
 }
 
 .tasks {
@@ -280,7 +292,6 @@ body {
     grid-template-columns: 1fr;
     grid-auto-rows: 200px;
     gap: 20px;
-    
 }
 
 .tasks > div {
@@ -297,6 +308,7 @@ body {
     gap: 20px;
     display: flex;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .tarefa-check {
@@ -595,11 +607,14 @@ body {
 
 .user-status {
     display: grid;
-    grid-template-rows: 3fr 4fr;
+    grid-template-rows: 1fr 2fr;
     grid-template-areas:
         'ofensive'
         'calendar'
     ;
+    max-height: calc(100vh - 30px);
+    gap: 20px;
+
 }
 
 .criar-lateral {
