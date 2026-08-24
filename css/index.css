@@ -21,7 +21,7 @@ header {grid-area: header;}
 */
 
 body {
-    grid-template-columns: 1fr 7fr;
+    grid-template-columns: /* minmax(200px, 1fr) */1fr 7fr;
     grid-template-rows: 1fr;
     grid-template-areas: 
         'navbar container'
@@ -261,7 +261,7 @@ body {
     width: 25px;
 }
 .bi-amp {
-    max-width: 25px;
+    width: 25px;
 }
 .bi-check {
     width: 25px;
@@ -302,7 +302,6 @@ body {
 /* O Card de Tarefa em si */
 .tarefa {
     height: 200px;
-    min-height: fit-content;
     border-radius: 20px;
     padding: 25px;
     gap: 20px;
@@ -523,6 +522,7 @@ body {
 
 .XP {
     font-size: 60px;
+
 }
 
 .lateral-info-text {
@@ -670,4 +670,81 @@ body {
     font-size: 35px;
     font-weight: 500;
     filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.25));
+}
+
+@media (max-width: 1400px) {
+
+/* tamanho das fontes */
+
+    .XP {
+        font-size: 40px;
+    }
+
+    .star, .fire {
+        font-size: 30px;
+    }
+
+    h1, .tarefa > h1, .gradient-card > h1, 
+    .tarefas-lateral > h1 {
+        font-size: 20px;
+    }
+
+    h2, strong {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .index-stats-conteudo {
+        font-size: 16px;
+    }
+
+    .index-stats-conteudo > strong {
+        font-size: 14px;
+    }
+
+/* Header */
+    .index-header-left {
+        margin-top: auto;
+    }
+
+    .index-header-right {
+        justify-content: space-between;
+        width: 60%;
+    }
+
+    .index-stats-card {
+        width: 60%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    .index-stats-item {
+        gap: 10px;
+    }
+
+    .index-header-add {
+        width: 150px;
+        height: 60px;
+        padding: 4px 10px;
+        font-size: 16px;
+        gap: 5px;
+        justify-content: center;
+    }
+
+    .status-filtro, .tarefas-notificacao {
+        display: none;
+    }
+
+
+    .filtros-card {
+        padding: 10px 15px;
+        /* border-radius: 100%; */
+    }
+
 }
